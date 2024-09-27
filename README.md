@@ -1,4 +1,4 @@
-# Incident Management System
+# SOCIAL NETWORKING SYSTEM
 
 This is a social networking application built using Django Rest Framework (DRF) with features like user authentication, friend request management, user search, and activity tracking. The application is designed for scalability, security, and optimized performance using techniques like query optimization, caching, and rate limiting.
 
