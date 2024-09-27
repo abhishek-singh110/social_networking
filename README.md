@@ -63,6 +63,6 @@ This is a social networking application built using Django Rest Framework (DRF) 
    - Database Optimization: Queries are optimized with select_related and prefetch_related to minimize database hits.
    - Rate Limiting: To prevent spam, friend requests are rate-limited and have a configurable cooldown period after rejection.
    - Security: User data (like passwords) is encrypted using Django's built-in cryptography tools to ensure security.
-   - Dockerization: The project is containerized using Docker for easy deployment and scalability.
+
 
 
