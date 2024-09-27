@@ -54,9 +54,7 @@ This is a social networking application built using Django Rest Framework (DRF) 
 
    - Open your web browser and navigate to http://127.0.0.1:8000/.
 
-
 7. API Documentation link : I have shared the postman collection with you and also attached the API documentation.
-
 
 8. Design Choices:
 
