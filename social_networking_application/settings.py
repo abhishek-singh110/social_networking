@@ -86,7 +86,6 @@ WSGI_APPLICATION = 'social_networking_application.wsgi.application'
 #     }
 # }
 
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -106,7 +105,7 @@ REST_FRAMEWORK = {
 
 
 SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),  # Adjust according to your needs
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=15),  # Adjust according to your needs
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': True,  # Issue a new refresh token on refresh
     'BLACKLIST_AFTER_ROTATION': True,  # Blacklist old refresh tokens
@@ -155,47 +154,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# To set the time period of the rejected friend request
+COOLDOWN_PERIOD = timedelta(hours=24)
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'abhisheksingh@snakescript.com'
-EMAIL_HOST_PASSWORD = 'Davidabhi@12'
-DEFAULT_FROM_EMAIL = 'abhisheksingh@snakescript.com'
-
-
-# # Email settings
-# EMAIL_BACKEND = os.getenv("EMAIL_BACKEND", "django.core.mail.backends.smtp.EmailBackend")
-# EMAIL_HOST = os.getenv("EMAIL_HOST", "smtp.gmail.com")
-# EMAIL_PORT = int(os.getenv("EMAIL_PORT", 587))
-# EMAIL_USE_TLS = os.getenv("EMAIL_USE_TLS", "True") == "True"
-# EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
-# EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
-
-
-
-
-
-
-
-
-# evn file 
-
-
-# DB settings
-# DB_NAME="social_network_db"
-# DB_USER="postgres"
-# DB_PASSWORD="1234"
-# DB_HOST="localhost"
-# DB_PORT="5432"
-
-
-# DEFAULT_AUTO_FIELD="django.db.models.BigAutoField"
-# # Email settings
-# EMAIL_BACKEND="django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST="smtp.gmail.com"
-# EMAIL_PORT="587"
-# EMAIL_USE_TLS="True"
-# EMAIL_HOST_USER="your_email_addres"
-# EMAIL_HOST_PASSWORD="Your_email_password"
+# To set the cache timeline
+CACHE_TIMEOUT = 60 * 5 
