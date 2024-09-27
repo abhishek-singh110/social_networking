@@ -19,7 +19,6 @@ This is a social networking application built using Django Rest Framework (DRF) 
 - **Database:** PostgreSQL
 - **Frontend:** Postman
 
-
 ## Installation
 
 ### Prerequisites
